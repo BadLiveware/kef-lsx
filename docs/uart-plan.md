@@ -238,25 +238,12 @@ Two shapes work:
 What to avoid: short bits with a long extension, and any extension sold as a
 "precision bit extender" without a stated outside diameter.
 
-Two things that become important at this depth:
+**The heads are Phillips, not Torx** (confirmed on a real unit). Confirm PH0,
+PH1 or PH2 before buying: many precision sets stop at PH1.
 
-* **Magnetise the tip.** A screw dropped 110 mm down is effectively lost without
-  a magnetic pickup, and a long magnetic retrieval tool is worth having.
-* **You cannot see the head.** Use a phone macro shot down the bore, or a cheap
-  USB endoscope, to identify the head size before buying a driver.
-
-**The heads are Phillips, not Torx** (confirmed on a real unit). Confirm the size
-(PH0, PH1 or PH2) before buying, and note that many precision sets stop at PH1,
-which is why the larger kits are the safer purchase.
-
-Phillips has a specific hazard at this depth: the profile is designed to **cam
-out** under excess torque, and 110 mm down a bore you cannot see it happening or
-feel it as clearly. So:
-
-* Use the exact size. A PH1 in a PH2 head rounds the corners quickly.
-* Apply firm **axial** pressure before turning, so the bit stays seated.
-* Turn slowly and stop at the first sign of slipping. A stripped Phillips head
-  at the bottom of a deep bore is much harder to recover than a stripped Torx.
+The head is not visible at this depth, so a phone macro shot or a USB endoscope
+is needed to size it. A magnetic pickup is also worth having, since a screw
+dropped 110 mm down is out of reach otherwise.
 
 ### Retention summary, in the order you meet it
 
