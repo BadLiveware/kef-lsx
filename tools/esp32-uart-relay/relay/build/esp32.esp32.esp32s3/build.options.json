@@ -1,0 +1,9 @@
+{
+  "additionalFiles": "",
+  "compiler.optimization_flags": "-Os",
+  "customBuildProperties": "",
+  "fqbn": "esp32:esp32:esp32s3:FlashSize=16M,PSRAM=opi",
+  "hardwareFolders": "/opt/arduino/data/packages/esp32/hardware/esp32/3.3.12,/opt/arduino/data/packages/esp32/hardware/esp32/3.3.12",
+  "otherLibrariesFolders": "/opt/arduino/user/libraries",
+  "sketchLocation": "/work/relay"
+}

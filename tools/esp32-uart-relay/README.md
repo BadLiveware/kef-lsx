@@ -54,14 +54,41 @@ If the FQBN menu keys differ in your core version, list them with:
 arduino-cli board details -b esp32:esp32:esp32s3
 ```
 
-## Access
+## Serial access, and the rootless Docker caveat
 
-`/dev/ttyACM0` is usually `root:uucp` mode 0660. Add yourself to the group and
-re-login:
+The build and flash tooling runs fine in the container, but the device node is
+still a host permission problem:
+
+```
+crw-rw---- 1 root uucp 985 /dev/ttyACM0      # mode 0660
+```
+
+Add yourself to the group and **re-login** (group changes do not reach existing
+sessions):
 
 ```sh
 sudo usermod -aG uucp "$USER"
 ```
+
+For a single session you can instead relax the node, which resets on replug:
+
+```sh
+sudo chmod 666 /dev/ttyACM0
+```
+
+### Why `group_add` does not solve it here
+
+This host runs **rootless Docker** (`Security Options: rootless`, subuid range
+231072). Two consequences:
+
+1. **No `user:` override in `compose.yaml`.** Container uid 1000 maps to a
+   subordinate host uid and cannot write to the bind mount. Container root maps
+   to the host user, so files stay host-owned. Running as container root is the
+   correct choice under rootless Docker.
+2. **`group_add` cannot grant host group membership.** The gid is remapped into
+   the subgid range, so it never matches host `uucp`. Serial access must be
+   granted on the host, as above. Under rootful Docker the `group_add` in
+   `compose.yaml` would work on its own.
 
 ## Verify before trusting it
 

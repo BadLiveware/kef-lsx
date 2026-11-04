@@ -1,0 +1,29 @@
+name: kef-lsx-relay
+
+x-tool: &tool
+  build:
+    context: .
+  working_dir: /work
+  # Deliberately no `user:` override. Under rootless Docker, container uid 1000
+  # maps to a subordinate host uid (231072 here) and cannot write to the bind
+  # mount. Container root maps to the host user, so files stay host-owned.
+  volumes:
+    - .:/work
+  environment:
+    # arduino-cli writes its build cache under HOME; the container runs as an
+    # arbitrary uid, so give it a path that is always writable.
+    HOME: /tmp
+    ARDUINO_DIRECTORIES_DATA: /opt/arduino/data
+    ARDUINO_DIRECTORIES_DOWNLOADS: /opt/arduino/staging
+    ARDUINO_DIRECTORIES_USER: /opt/arduino/user
+
+services:
+  toolchain:
+    <<: *tool
+
+  device:
+    <<: *tool
+    devices:
+      - "${SERIAL_DEVICE:-/dev/ttyACM0}:${SERIAL_DEVICE:-/dev/ttyACM0}:rwm"
+    group_add:
+      - "${SERIAL_GID:-0}"

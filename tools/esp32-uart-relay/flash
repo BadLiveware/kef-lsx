@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+ROOT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+COMPOSE=(docker compose --project-directory "$ROOT_DIR" -f "$ROOT_DIR/compose.yaml")
+
+# N16R8 = 16 MB flash, 8 MB octal PSRAM
+FQBN="${FQBN:-esp32:esp32:esp32s3:FlashSize=16M,PSRAM=opi}"
+SERIAL_DEVICE="${SERIAL_DEVICE:-/dev/ttyACM0}"
+
+export LOCAL_UID="${LOCAL_UID:-$(id -u)}"
+export LOCAL_GID="${LOCAL_GID:-$(id -g)}"
+
+if [[ ! -e "$SERIAL_DEVICE" ]]; then
+  printf 'No serial device at %s. Set SERIAL_DEVICE, or plug the board in.\n' "$SERIAL_DEVICE" >&2
+  exit 1
+fi
+export SERIAL_DEVICE
+export SERIAL_GID="${SERIAL_GID:-$(stat -c %g "$SERIAL_DEVICE")}"
+
+printf 'Building image (first run downloads the esp32 core, roughly 1.5 GB)\n'
+"${COMPOSE[@]}" build toolchain
+
+printf 'Compiling relay for %s\n' "$FQBN"
+"${COMPOSE[@]}" run --rm toolchain \
+  arduino-cli compile --fqbn "$FQBN" --output-dir /work/build relay
+
+printf 'Flashing %s\n' "$SERIAL_DEVICE"
+"${COMPOSE[@]}" run --rm device \
+  arduino-cli upload -p "$SERIAL_DEVICE" --fqbn "$FQBN" --input-dir /work/build relay
+
+printf 'Done. Console: picocom -b 230400 %s\n' "$SERIAL_DEVICE"
