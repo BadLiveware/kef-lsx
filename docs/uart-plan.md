@@ -199,24 +199,38 @@ The fabric is scuffed at these points and tucks back in on reassembly.
 deep down inside a bore**. These clamp the back plate to the **front baffle**,
 which is why the plate stays absolutely rigid after every other screw is out.
 
-**Measured on a real unit:** the bore is **19 mm wide** and at least **11 mm
-deep** before the screw. That is generous, so reach is not the constraint.
+**Measured on a real unit:**
 
-The thing that obstructs is the **bit holder**, not the bore. A universal
-long-shaft driver with a fat knurled or 1/4-inch magnetic collar will not enter.
+| Dimension | Value |
+|---|---|
+| Opening width | **19 mm** (may taper below the lip) |
+| Guaranteed clear diameter | **at least 11 mm** |
+| Depth to the screw | **roughly 150 mm** |
+
+So **reach is the real constraint, not width.** You need:
+
+* **Blade or extension of 200 mm or more**, to clear 150 mm of bore and still
+  leave room for fingers.
+* **Shaft diameter under 11 mm.** Six to eight mm is comfortable and clears the
+  tapered section whatever the opening measurement is.
+* **No bit-holder collar.** A universal long-shaft driver with a fat magnetic or
+  knurled holder will not pass, which is the usual reason a "long" driver fails
+  here.
+
 Two workable answers:
 
-* A **dedicated long-shaft screwdriver with an integral tip**. No holder, so the
-  shaft is typically 6 to 8 mm and drops straight in. This is the simplest fix.
-* A **slim bit holder** whose outside diameter is comfortably under 19 mm, on a
-  150 mm or longer extension. Measure the collar before buying.
+* An **extra-long screwdriver** (200 to 300 mm blade) with an integral tip, shaft
+  6 to 8 mm.
+* A **4 mm precision bit set with a 150 to 300 mm slim extension**, whose holder
+  is typically 6 to 8 mm outside diameter.
 
-Identify the head first by looking down the bore with a phone torch or macro
-shot. It reads as a star pattern, so Torx in the T10 to T20 range, but confirm
-before buying a driver.
+Two things that become important at this depth:
 
-Magnetise the tip: a dropped screw falls into the cabinet, and one was already
-rattling inside this unit before the plate came free.
+* **Magnetise the tip.** A screw dropped 150 mm down is effectively lost without
+  a magnetic pickup, and a long magnetic retrieval tool is worth having.
+* **You cannot see the head.** Use a phone macro shot down the bore, or a cheap
+  USB endoscope, to identify Torx versus Phillips and the size before buying a
+  driver.
 
 ### Retention summary, in the order you meet it
 
