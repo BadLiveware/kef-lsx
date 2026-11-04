@@ -199,10 +199,24 @@ The fabric is scuffed at these points and tucks back in on reassembly.
 deep down inside a bore**. These clamp the back plate to the **front baffle**,
 which is why the plate stays absolutely rigid after every other screw is out.
 
-You need a long, thin-shafted driver to reach them. A standard handle and a
-1/4-inch bit will not clear the bore. Magnetise the bit: a dropped screw falls
-into the cabinet, and one was already rattling inside this unit before the plate
-came free.
+**Measured on a real unit:** the bore is **19 mm wide** and at least **11 mm
+deep** before the screw. That is generous, so reach is not the constraint.
+
+The thing that obstructs is the **bit holder**, not the bore. A universal
+long-shaft driver with a fat knurled or 1/4-inch magnetic collar will not enter.
+Two workable answers:
+
+* A **dedicated long-shaft screwdriver with an integral tip**. No holder, so the
+  shaft is typically 6 to 8 mm and drops straight in. This is the simplest fix.
+* A **slim bit holder** whose outside diameter is comfortably under 19 mm, on a
+  150 mm or longer extension. Measure the collar before buying.
+
+Identify the head first by looking down the bore with a phone torch or macro
+shot. It reads as a star pattern, so Torx in the T10 to T20 range, but confirm
+before buying a driver.
+
+Magnetise the tip: a dropped screw falls into the cabinet, and one was already
+rattling inside this unit before the plate came free.
 
 ### Retention summary, in the order you meet it
 
