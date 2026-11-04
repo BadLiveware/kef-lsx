@@ -228,14 +228,9 @@ enough; the grip section is often only on one face.
 
 Two shapes work:
 
-* **A dedicated long Phillips screwdriver**, 200 to 300 mm blade, integral tip,
-  shaft around 6 mm with no swell anywhere. Simplest and most reliable. Wera 350
-  in PH1 x 300 is 4.5 mm shaft, PH2 x 300 is about 6 mm.
-
-  A cheap known-fitting option is **Jula Hard Head Stjärnskruvmejsel PH2,
-  art. 110364**, around 50 SEK: blade length **450 mm**, total length 565 mm,
-  through-hardened core. It has a hex boss at the blade base for spanner
-  assistance, but that sits near the handle and therefore outside the bore.
+* **A dedicated long Phillips screwdriver**, 150 mm blade or longer, integral
+  tip, shaft around 6 mm with no swell anywhere. Simplest and most reliable, and
+  a 150 mm blade already clears the 110 mm bore.
 * **A long 1/4 inch hex Phillips bit, 150 to 200 mm**, chucked in any holder. The
   bit shaft is a constant 6.35 mm hex, and because the bit itself is long the
   fat holder stays outside the bore.
