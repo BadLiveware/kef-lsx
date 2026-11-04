@@ -205,12 +205,13 @@ which is why the plate stays absolutely rigid after every other screw is out.
 |---|---|
 | Opening width | **19 mm** (may taper below the lip) |
 | Guaranteed clear diameter | **at least 11 mm** |
-| Depth to the screw | **roughly 150 mm** |
+| Depth to the screw | **110 mm** |
 
 So **reach is the real constraint, not width.** You need:
 
-* **Blade or extension of 200 mm or more**, to clear 150 mm of bore and still
-  leave room for fingers.
+* **Blade or extension of 150 mm or more**, to clear 110 mm of bore and still
+  leave room for fingers. A 100 mm extension plus a precision bit reaches about
+  115 mm, which is marginal but workable.
 * **Shaft diameter under 11 mm.** Six to eight mm is comfortable and clears the
   tapered section whatever the opening measurement is.
 * **No bit-holder collar.** A universal long-shaft driver with a fat magnetic or
@@ -219,14 +220,15 @@ So **reach is the real constraint, not width.** You need:
 
 Two workable answers:
 
+* A **4 mm precision bit set with a 100 mm or longer slim extension**. The holder
+  is typically 6 to 8 mm outside diameter, so it clears the 11 mm minimum. This
+  is the cheapest workable route and covers every Torx size in one purchase.
 * An **extra-long screwdriver** (200 to 300 mm blade) with an integral tip, shaft
-  6 to 8 mm.
-* A **4 mm precision bit set with a 150 to 300 mm slim extension**, whose holder
-  is typically 6 to 8 mm outside diameter.
+  6 to 8 mm, if you already know the head size.
 
 Two things that become important at this depth:
 
-* **Magnetise the tip.** A screw dropped 150 mm down is effectively lost without
+* **Magnetise the tip.** A screw dropped 110 mm down is effectively lost without
   a magnetic pickup, and a long magnetic retrieval tool is worth having.
 * **You cannot see the head.** Use a phone macro shot down the bore, or a cheap
   USB endoscope, to identify Torx versus Phillips and the size before buying a
