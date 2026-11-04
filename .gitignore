@@ -1,0 +1,7 @@
+# Rust
+/target
+
+# Research captures contain the speaker's WPA2 PSK and serial number.
+# Treat them as secrets; do not commit them.
+/captures
+*.jsonl
