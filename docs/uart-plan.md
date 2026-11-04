@@ -306,6 +306,54 @@ reboot, and port 8000 serves the same shell over the network.
 | Noise only during boot | On a clock or data line, not UART |
 | No `sds://>` prompt | Keep pressing Enter; the guide says to |
 
+## UART has no standard physical form
+
+Worth stating because it determines what you buy. UART is a signalling
+convention (TX, RX, ground), not a connector, so how it appears varies:
+
+| Presentation | How you attach |
+|---|---|
+| 0.1 inch header, populated | Female dupont, direct |
+| 0.1 inch holes, unpopulated | Solder a pin, or a pogo pin |
+| **Bare flat test pads** | **Dupont cannot grip.** Solder, pogo, or needle probe |
+| Vias, tented or open | Needle probe, or scrape and solder |
+| Dedicated connector (JST-SH, PicoBlade, FPC) | Matching connector or adapter |
+| Card-edge / SODIMM contacts | Matching socket (this is the CY920 module itself) |
+| Only on chip pins | SOIC clip or needle probe, with short-circuit risk |
+| Not broken out | Multiplexed elsewhere or disabled in firmware |
+
+The CY920 debug port is most likely exposed as **flat gold pads** on the MAMP
+board, which is the one case a female dupont lead cannot grip.
+
+### When clip-on leads are the right answer
+
+* Pads are flat, so there is nothing to insert into.
+* Pitch is small and solder would bridge neighbours.
+* You want **several candidates probed at once**, for a logic analyser or a
+  multi-channel sniffer. Soldering eight tails is miserable; clips or pogo pins
+  are the sane choice.
+* The board sits in a cavity and cannot be approached straight on.
+* You do not want to solder at all.
+
+### Which lead for which job
+
+| Lead | Works on | Notes |
+|---|---|---|
+| Female dupont | 2.54 mm pins only | What the FTDI cable has |
+| Mini grabber / test hook | Component legs, wires, header pins | Needs something to hook around |
+| SOIC / IC clip | Chip legs | Can bridge adjacent pins |
+| **Pogo pin / spring probe** | **Flat pads** | Correct tool here |
+| Needle probe | Anything, briefly | Fine for identifying, poor for capturing a boot log |
+| Solder plus thin enamelled wire | Anything solderable | Most reliable, reversible with solder wick |
+
+Test pads are designed to be probed and soldered to, so soldering short tails is
+low risk. Pogo pins are better if you want to sample many pads at once.
+
+**Check this before buying probes:** the ~14-pad row may be an **unpopulated
+connector footprint** rather than individual test points. If the pads sit on a
+regular pitch with a silk outline, it may want a ribbon or FPC connector, and the
+correct answer is a matching connector rather than clips.
+
 ## Target: the pad row on the MAMP board
 
 The teardown photos show a **row of roughly fourteen bare gold pads** in the
