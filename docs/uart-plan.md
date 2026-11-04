@@ -220,12 +220,23 @@ So **reach is the real constraint, not width.** You need:
 
 Two workable answers:
 
-* A **4 mm precision bit set with a 100 mm or longer slim extension**. The holder
-  is typically 6 to 8 mm outside diameter, so it clears the 11 mm minimum. This
-  is the cheapest workable route, provided the set includes the Phillips size
-  you need.
-* An **extra-long screwdriver** (200 to 300 mm blade) with an integral tip, shaft
-  6 to 8 mm, if you already know the head size.
+**The shaft must be a constant diameter over its whole length.** This is the
+requirement that rules out most kits. Precision-set extensions usually have a
+knurled finger grip or a hex boss that swells to 10 to 12 mm, which binds in an
+11 mm bore over 110 mm of travel. A visual check of the product photo is not
+enough; the grip section is often only on one face.
+
+Two shapes work:
+
+* **A dedicated long Phillips screwdriver**, 200 to 300 mm blade, integral tip,
+  shaft around 6 mm with no swell anywhere. Simplest and most reliable. Wera 350
+  in PH1 x 300 is 4.5 mm shaft, PH2 x 300 is about 6 mm.
+* **A long 1/4 inch hex Phillips bit, 150 to 200 mm**, chucked in any holder. The
+  bit shaft is a constant 6.35 mm hex, and because the bit itself is long the
+  fat holder stays outside the bore.
+
+What to avoid: short bits with a long extension, and any extension sold as a
+"precision bit extender" without a stated outside diameter.
 
 Two things that become important at this depth:
 
