@@ -21,8 +21,13 @@
 #define LINK_BAUD  230400
 
 void setup() {
-  Serial.begin(LINK_BAUD);                                    // UART0 -> onboard bridge -> host
+  Serial.begin(LINK_BAUD);                                      // UART0 -> onboard bridge -> host
   Serial1.begin(LINK_BAUD, SERIAL_8N1, SPK_RX_PIN, SPK_TX_PIN); // UART1 -> speaker
+
+  // Idle the receive line high. An unconnected pin floats and the relay would
+  // otherwise forward a constant stream of framing noise to the host, which is
+  // confusing when you are trying to tell whether the speaker is talking.
+  pinMode(SPK_RX_PIN, INPUT_PULLUP);
 }
 
 void loop() {
